@@ -56,21 +56,22 @@ public class EmployeeSalaryCalculator
 		*/
 
 
-				if(HW <= standardWorkingHours)
-				{
-					//YOUR CODE STARTS HERE
-					 
-
-					//YOUR CODE ENDS HERE
-				}
-				else
-				{
-					//YOUR CODE STARTS HERE
- 
-
-					//YOUR CODE ENDS HERE
-				}
-				return grossSalary;
+			if(HW <= standardWorkingHours)
+			{
+				//YOUR CODE STARTS HERE
+				basicPay = HW * HR;
+				grossSalary = basicPay;
+				//YOUR CODE ENDS HERE
+			}
+			else
+			{
+				//YOUR CODE STARTS HERE
+				int overtimeHours = HW - 40;
+				basicPay = 40 * HR;
+				grossSalary = basicPay + ((2 * HR) * overtimeHours);
+				//YOUR CODE ENDS HERE
+			}
+			return grossSalary;
 	}
 	
 	static void displayPaySlip()
